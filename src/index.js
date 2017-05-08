@@ -10,7 +10,7 @@ app.get('/:url', (req, res) => {
     res.send(body);
   }).catch(e => {
     res.status(500)
-    res.send(`An error occured ${e}`);
+    res.send(`An error occurred ${e}`);
   });
 })
 
