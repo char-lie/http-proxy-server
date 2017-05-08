@@ -1,0 +1,24 @@
+{
+  "name": "proxy",
+  "version": "0.0.2",
+  "author": "Valerii Kryhin",
+  "description": "Simple HTTP proxy server",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "start": "node ./dist/bundle.js",
+    "build": "grunt webpack:build",
+    "watch": "grunt watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-webpack": "^3.0.0",
+    "webpack": "^2.5.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-bundle": "^0.1.6"
+  }
+}
