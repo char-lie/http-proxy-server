@@ -3,8 +3,9 @@ import proxyRequest from './proxy';
 
 const app = express();
 
-app.get('/:url', (req, res) => {
-  proxyRequest(req.params.url)
+app.get('/', (req, res) => {
+  const url = req.query.url || 'domains.google';
+  proxyRequest(url)
     .then(({ status, body, headers }) => {
       res.status(status);
       res.set(headers);
