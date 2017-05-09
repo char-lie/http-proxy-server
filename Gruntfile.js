@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     },
     watch: {
       app: {
-        files: ['src/*.js'],
+        files: [path.join('src', '*.js')],
         tasks: ['webpack:build'],
       },
     },
