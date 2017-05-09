@@ -8,9 +8,9 @@ export default function(hostname) {
       path: '/',
       agent: false,
     }, response => {
-      let body = '';
+      let body = new Buffer('');
       response.on('data', chunk => {
-        body += chunk;
+        body = Buffer.concat([body, chunk]);
       });
       response.on('end', () => {
         fulfill({
