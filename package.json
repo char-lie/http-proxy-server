@@ -3,16 +3,16 @@
   "version": "0.0.2",
   "author": "Valerii Kryhin",
   "description": "Simple HTTP proxy server",
-  "main": "./dist/bundle.js",
   "scripts": {
     "start": "node ./dist/bundle.js",
     "build": "grunt webpack:build",
-    "watch": "grunt watch"
+    "watch": "grunt concurrent:dev"
   },
   "license": "MIT",
   "dependencies": {
     "express": "^4.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-nodemon": "^0.4.2",
     "grunt-webpack": "^3.0.0",
     "webpack": "^2.5.1"
   },
